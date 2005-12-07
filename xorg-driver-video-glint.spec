@@ -1,17 +1,17 @@
 Summary:	X.org video driver for GLINT/Permedia video chips
 Summary(pl):	Sterownik obrazu X.org dla uk³adów graficznych GLINT/Permedia
 Name:		xorg-driver-video-glint
-Version:	1.0.1
+Version:	1.0.1.1
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/driver/xf86-video-glint-%{version}.tar.bz2
-# Source0-md5:	1fe86b8b8ef11f045349ff1b7d567ad1
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/driver/xf86-video-glint-%{version}.tar.bz2
+# Source0-md5:	ecfc4aac8cb479d17805ee1167ae47fa
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	Mesa-libGL-devel
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	libdrm-devel
+BuildRequires:	libdrm-devel >= 2.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-proto-fontsproto-devel
@@ -20,7 +20,7 @@ BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-videoproto-devel
 BuildRequires:	xorg-proto-xf86dgaproto-devel
 BuildRequires:	xorg-proto-xf86driproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.1
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRequires:	xorg-xserver-server-devel >= 0.99.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -54,8 +54,7 @@ Permedia 3, R3, R4) oraz Texas Instruments (Permedia, Permedia 2).
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	drivermandir=%{_mandir}/man4
+	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
 
@@ -66,4 +65,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog DRI.txt README.pm3
 %attr(755,root,root) %{_libdir}/xorg/modules/drivers/glint_drv.so
-%{_mandir}/man4/glint.4x*
+%{_mandir}/man4/glint.4*
