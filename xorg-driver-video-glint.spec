@@ -1,5 +1,5 @@
 Summary:	X.org video driver for GLINT/Permedia video chips
-Summary(pl.UTF-8):   Sterownik obrazu X.org dla układów graficznych GLINT/Permedia
+Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych GLINT/Permedia
 Name:		xorg-driver-video-glint
 Version:	1.1.1
 Release:	0.1
