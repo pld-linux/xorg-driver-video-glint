@@ -1,5 +1,5 @@
 Summary:	X.org video driver for GLINT/Permedia video chips
-Summary(pl):	Sterownik obrazu X.org dla uk³adów graficznych GLINT/Permedia
+Summary(pl.UTF-8):   Sterownik obrazu X.org dla ukÅ‚adÃ³w graficznych GLINT/Permedia
 Name:		xorg-driver-video-glint
 Version:	1.1.1
 Release:	0.1
@@ -31,9 +31,9 @@ X.org video driver for GLINT/Permedia video chips. It supports 3Dlabs
 GAMMA2, Permedia, Permedia 2, Permedia 2v, Permedia 3, R3, R4) and
 Texas Instruments (Permedia, Permedia 2) chips.
 
-%description -l pl
-Sterownik obrazu X.org dla uk³adów graficznych GLINT/Permedia.
-Obs³uguje uk³ady 3Dlabs (GLINT MX, GLINT 500TX, GLINT 300SX, GLINT
+%description -l pl.UTF-8
+Sterownik obrazu X.org dla ukÅ‚adÃ³w graficznych GLINT/Permedia.
+ObsÅ‚uguje ukÅ‚ady 3Dlabs (GLINT MX, GLINT 500TX, GLINT 300SX, GLINT
 GAMMA, GLINT DELTA, GLINT GAMMA2, Permedia, Permedia 2, Permedia 2v,
 Permedia 3, R3, R4) oraz Texas Instruments (Permedia, Permedia 2).
 
