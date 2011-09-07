@@ -1,33 +1,25 @@
 Summary:	X.org video driver for GLINT/Permedia video chips
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych GLINT/Permedia
 Name:		xorg-driver-video-glint
-Version:	1.2.5
-Release:	5
+Version:	1.2.6
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-glint-%{version}.tar.bz2
-# Source0-md5:	77313a32280bdfee6269e28eca144274
+# Source0-md5:	a8458d1b6331c142c8377298c6fecddd
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	Mesa-libGL-devel
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
-BuildRequires:	libdrm-devel >= 2.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	rpmbuild(macros) >= 1.389
 BuildRequires:	xorg-lib-libpciaccess-devel >= 0.8.0
-BuildRequires:	xorg-proto-fontsproto-devel
-BuildRequires:	xorg-proto-randrproto-devel
-BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-videoproto-devel
 BuildRequires:	xorg-proto-xextproto-devel >= 7.0.99.1
 BuildRequires:	xorg-proto-xf86dgaproto-devel
-BuildRequires:	xorg-proto-xf86driproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
 %{?requires_xorg_xserver_videodrv}
-Requires:	xorg-xserver-libdri >= 1.0.99.901
-Requires:	xorg-xserver-libglx >= 1.0.99.901
 Requires:	xorg-xserver-server >= 1.0.99.901
 Provides:	xorg-driver-video
 Obsoletes:	X11-driver-glint < 1:7.0.0
@@ -73,6 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog DRI.txt README README.pm3
+%doc COPYING ChangeLog README README.pm3
 %attr(755,root,root) %{_libdir}/xorg/modules/drivers/glint_drv.so
 %{_mandir}/man4/glint.4*
