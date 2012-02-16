@@ -1,12 +1,12 @@
 Summary:	X.org video driver for GLINT/Permedia video chips
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych GLINT/Permedia
 Name:		xorg-driver-video-glint
-Version:	1.2.6
+Version:	1.2.7
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-glint-%{version}.tar.bz2
-# Source0-md5:	a8458d1b6331c142c8377298c6fecddd
+# Source0-md5:	c4edb998485020debffeafc491ea759e
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
