@@ -1,15 +1,13 @@
 Summary:	X.org video driver for GLINT/Permedia video chips
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla układów graficznych GLINT/Permedia
 Name:		xorg-driver-video-glint
-Version:	1.2.8
-Release:	10
+Version:	1.2.9
+Release:	1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-glint-%{version}.tar.bz2
-# Source0-md5:	775579c67dc55ff4909de3638bafd19f
-Patch0:		mibstore.patch
-Patch1:		xserver-1.19.patch
-URL:		http://xorg.freedesktop.org/
+Source0:	https://xorg.freedesktop.org/releases/individual/driver/xf86-video-glint-%{version}.tar.bz2
+# Source0-md5:	3d166b7a97d96007272ffc153d5f81fd
+URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -19,6 +17,7 @@ BuildRequires:	xorg-lib-libpciaccess-devel >= 0.8.0
 BuildRequires:	xorg-proto-videoproto-devel
 BuildRequires:	xorg-proto-xextproto-devel >= 7.0.99.1
 BuildRequires:	xorg-proto-xf86dgaproto-devel
+BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
 %{?requires_xorg_xserver_videodrv}
@@ -43,8 +42,6 @@ Permedia 3, R3, R4) oraz Texas Instruments (Permedia, Permedia 2).
 
 %prep
 %setup -q -n xf86-video-glint-%{version}
-%patch0 -p1
-%patch1 -p1
 
 %build
 %{__libtoolize}
